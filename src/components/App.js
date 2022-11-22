@@ -1,25 +1,30 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 
 import './App.css';
+
+import reducer, { initialState } from '../reducers';
 
 import TotalDisplay from './TotalDisplay';
 import CalcButton from './CalcButton';
 
 function App() {
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
     <div className="App">
       <nav className="navbar navbar-dark bg-dark">
         <a className="navbar-brand" href="#"> Reducer Challenge</a>
       </nav>
 
-      <div className = "container row mt-5">
+      <div className="container row mt-5">
         <div className="col-md-12 d-flex justify-content-center">
           <form name="Cal">
             
-            <TotalDisplay value={0}/>
+            <TotalDisplay value={state.total}/>
             <div className="row details">
-              <span id="operation"><b>Operation:</b> X</span>
-              <span id="memory"><b>Memory:</b> 0</span>
+              <span id="operation"><b>Operation:</b> {state.operation}</span>
+              <span id="memory"><b>Memory:</b> {state.memory}</span>
             </div>
             
             <div className="row">
