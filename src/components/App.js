@@ -2,8 +2,8 @@ import React, { useReducer } from 'react';
 
 import './App.css';
 
-import reducer, { initialState, applyNumber } from '../reducers';
-import { APPLY_NUMBER } from '../actions';
+import reducer, { initialState } from '../reducers';
+import { APPLY_NUMBER, CHANGE_OPERATION } from '../actions';
 
 import TotalDisplay from './TotalDisplay';
 import CalcButton from './CalcButton';
