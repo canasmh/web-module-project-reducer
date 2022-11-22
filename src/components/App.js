@@ -29,7 +29,7 @@ function App() {
             </div>
             
             <div className="row">
-              <CalcButton value={"M+"}/>
+              <CalcButton value={"M+"} onClick={() => dispatch(addMemory(state.total))}/>
               <CalcButton value={"MR"}/>
               <CalcButton value={"MC"}/>
             </div>
