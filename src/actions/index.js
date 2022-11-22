@@ -4,6 +4,7 @@ export const APPLY_NUMBER = "APPLY_NUMBER";
 export const CHANGE_OPERATION = "CHANGE_OPERATION";
 export const ADD_MEMORY = "ADD_MEMORY";
 export const MEMORY_RECALL = "MEMORY_RECALL";
+export const CLEAR_MEMORY = "CLEAR_MEMORY";
 
 export const addOne = () => {
     return({type:ADD_ONE});
@@ -23,4 +24,8 @@ export const addMemory = (total) => {
 
 export const memoryRecall = (memory) => {
     return ({type:MEMORY_RECALL, payload: memory})
+}
+
+export const clearMemory = () => {
+    return ({type:CLEAR_MEMORY, payload: 0});
 }
