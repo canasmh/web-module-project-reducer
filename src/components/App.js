@@ -53,9 +53,9 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton value={"+"}/>
-              <CalcButton value={"*"}/>
-              <CalcButton value={"-"}/>
+              <CalcButton value={"+"} onClick={() => dispatch({type: CHANGE_OPERATION, payload: "+"})}/>
+              <CalcButton value={"*"} onClick={() => dispatch({type: CHANGE_OPERATION, payload: "*"})}/>
+              <CalcButton value={"-"} onClick={() => dispatch({type: CHANGE_OPERATION, payload: "-"})}/>
             </div>
 
             <div className="row ce_button">
